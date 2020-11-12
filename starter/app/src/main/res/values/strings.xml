@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoe Store</string>
+    <string name="fragment_welcome">Welcome</string>
+    <string name="fragment_instructions">Instructions</string>
+    <string name="fragment_inventory">Inventory</string>
+    <string name="fragment_shoe_details">Add Shoe</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="login">Login With Existing Account</string>
+    <string name="create">Create New Account</string>
+    <string name="welcome_title">Welcome to Epic Shoe Store</string>
+    <string name="about_us">
+        At Epic Shoe Store we exist at the intersection of ideas where performance meets style,
+        where classic meets technology, and where street meets fashion.\n\nWe deliver the EPIC FINISH by guaranteeing that our
+        customers have a positive, seamless, and memorable experience in any way they touch our brand.\n\nWe deliver the EPIC
+        FINISH by providing the most desirable sneakers, latest trends, and exclusives from the best brands.\n\nTap next to view inventory instructions.
+    </string>
+    <string name="button_instructions">Next</string>
+    <string name="instructions_title">How to Add Shoe Inventory</string>
+    <string name="instructions_message">
+        Adding to our inventory is very simple.\n\nIn the inventory screen, tap the add button to enter details about our shoe.
+        Enter all the necessary information about the shoe we provide.\n\nTap save to add to our shoe inventory. If you need to cancel, tap cancel.
+    </string>
+    <string name="button_shoe_list">Inventory</string>
+    <string name="cd_add_shoe">Add Shoe</string>
+    <string name="menu_log_out">Log Out</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="hint_shoe_name">Enter Name of Shoe</string>
+    <string name="company">Company</string>
+    <string name="hint_company">Enter Name of Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="hint_size">Enter Size of Shoe</string>
+    <string name="description">Description</string>
+    <string name="hint_description">Enter a Description</string>
+    <string name="button_save">Save</string>
 </resources>
