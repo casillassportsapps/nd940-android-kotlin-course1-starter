@@ -17,4 +17,12 @@ class ShoeListViewModel : ViewModel() {
     fun add(shoe: Shoe) {
         _shoes.value?.add(shoe)
     }
+
+    private val _title = MutableLiveData<String>()
+    val title: LiveData<String>
+        get() = _title
+
+    fun setTitle(title: String) {
+        _title.value = title
+    }
 }

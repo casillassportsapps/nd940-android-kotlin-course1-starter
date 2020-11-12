@@ -2,6 +2,7 @@ package com.udacity.shoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
@@ -22,18 +23,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+        viewModel.title.observe(this, {
+            title = it
+        })
 
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment, R.id.inventoryFragment))
         val navController = findNavController(R.id.nav_host_fragment)
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             menu?.findItem(R.id.logOut)?.isVisible = destination.id == R.id.inventoryFragment
+            viewModel.setTitle(destination.label.toString())
         }
-
-        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
-        binding.lifecycleOwner = this
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
